@@ -1,0 +1,11 @@
+.items_main {
+    margin-top: 20px;
+    /*border: 1px solid #cecece;*/
+}
+.items_main h3 {
+    font-size: 14pt;
+    color: #ccc;
+    display: block;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}

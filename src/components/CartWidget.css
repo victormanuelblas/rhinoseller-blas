@@ -1,0 +1,18 @@
+.cart_content {
+    display: block;
+    width: 70px;
+    height: 40px;
+}
+.cart_content_itms {
+    width: 25px;
+    height: 25px;
+    margin-top: 8px;
+    margin-left: 5px;
+    padding: 0px;
+    text-align: center;
+    font-size: 12pt;
+    border-radius: 20px;
+    color: #303030;
+    background-color: #eee;
+    border: 1px solid #cecece;
+}
