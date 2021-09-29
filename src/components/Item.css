@@ -1,0 +1,48 @@
+.item_detail {
+    width: 100%;
+    border: 1px solid navy;
+    padding: 5px;
+    text-align: center;
+}
+.item_detail h6 {
+    font-size: 12pt;
+    display: block;
+    height: 30px;
+    padding-top: 10px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    background-color: #e5e5e5;
+}
+.item_detail h5 {
+    font-size: 8pt;
+    display: block;
+    height: 30px;
+    padding-top: 10px;
+    text-align: center
+}
+.item_detail b {
+    font-size: 8pt;
+    display: block;
+    height: 30px;
+    padding-top: 10px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.item_detail img {
+    width: 280px;
+    padding-top: 10px;
+    margin-left: -10px;
+}
+.item_detail strong {
+    font-size: 8pt;
+    display: block;
+    height: 30px;
+    margin-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+.item_detail strong span {
+    font-size: 10pt;
+}
