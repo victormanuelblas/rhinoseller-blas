@@ -1,0 +1,31 @@
+.detail_content {
+    border-top: 1px solid #cecece;
+}
+.detail_content h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.detail_content strong {
+    display: block;
+    margin-bottom: 20px;
+}
+.detail_content strong span{
+    font-size: 14pt;
+}
+.detail_content h6 {
+    display: block;
+    margin-bottom: 20px;
+}
+.detail_content b {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.detail_content img {
+    width: 100%;
+}
+
+.temp {
+    border: 1px solid green;
+}

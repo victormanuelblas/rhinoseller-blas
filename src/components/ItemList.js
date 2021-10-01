@@ -41,7 +41,7 @@ function ItemList() {
 
     const set_item_list = async () => {
         const get_items = await datacontent()
-    
+
         setitem_list(get_items);
     }
     

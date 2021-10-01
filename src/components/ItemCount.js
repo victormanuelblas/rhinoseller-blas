@@ -13,33 +13,34 @@ function ItemCount({stock, initial, onAdd}) {
         if (parseInt(qnty) > 1){
             setqnty(qnty = parseInt(qnty) - 1);
             }
-        console.log('qnty',qnty);
+        //console.log('qnty',qnty);
     }
     function Aumentar(){
         if (parseInt(qnty) < parseInt(stck)){
             setqnty(qnty = parseInt(qnty) + 1);
         }
-        console.log('qnty',qnty);
+        //console.log('qnty',qnty);
     }
 
     function AddToCart(){
         if (parseInt(stck) >= 1){
-            console.log('agregaremos', qnty);
+            //console.log('agregaremos', qnty);
             //lo dejo comentado, puesto que al no existir está dando error en página
             //onAdd(qnty);
         }
     }
 
     return (
-        <div className="col-12 col-md-3">
+        <div className="col-12">
             <div className="prod_content">
+                {/*}
                 <div className="row">
                     <div className="col-12">
                         <h6>Control de almacén</h6>
                         <strong>Aplicación de control de almacén para todo tipo de negocio</strong>
                     </div>
                 </div>
-
+    */}
                 <div className="row">
                     <div className="col-12">
                         <div className="row">
