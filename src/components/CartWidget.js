@@ -7,7 +7,7 @@ function CartWidget (props) {
         <div className="cart_content">
             <div className="row">
                 <div className="col-6">
-                <img src={CartIcon} />
+                <img src={CartIcon} alt="rhinoseller" />
                 </div>
                 <div className="col-6 cart_content_itms">
                     <span>{props.itms}</span>

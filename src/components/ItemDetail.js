@@ -11,7 +11,7 @@ console.log('Recibiendo', item)
         <div className="col-12 detail_content">
             <div className="row">
                 <div className="col-12 col-md-6">
-                    <img src={pictureUrl}/>
+                    <img src={pictureUrl} alt="Rhinoseller"/>
                 </div>
                 <div className="col-12 col-md-6">
                     <div className="row">
@@ -23,7 +23,7 @@ console.log('Recibiendo', item)
                     </div>
                     <div className="row">
                         <div className="col-12 col-md-6">
-                            <ItemCount stock={stock} initial="1" />
+                            <ItemCount stock={stock} initial="1" onAdd />
                         </div>
                     </div>
                     <div className="row">

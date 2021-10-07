@@ -1,0 +1,56 @@
+[
+{
+    "id": "P5000",
+    "category": "aplicaciones",
+    "title": "Control de almacén",
+    "description": "Aplicación de control de almacén para todo tipo de insumos",
+    "price": "600.00 USD",
+    "pictureUrl": "https://www.tcasoluciones.com/wp-content/uploads/control-de-inventarios-en-las-pymes.jpg",
+    "stock": "6"
+},
+{
+    "id": "P5100",
+    "category": "aplicaciones",
+    "title": "Punto de venta",
+    "description": "Aplicación de punto de venta para todo tipo de negocio",
+    "price": "800.00 USD",
+    "pictureUrl": "https://miracomosehace.com/wp-content/uploads/mch/sistema-pos_9926.jpg",
+    "stock": "4"
+},
+{
+    "id": "P5200",
+    "category": "aplicaciones",
+    "title": "Facturación electrónica",
+    "description": "Aplicación para el envío de comprobantes electrónicos",
+    "price": "1000.00 USD",
+    "pictureUrl": "https://www.medinaylinarescontadores.com/noticias/wp-content/uploads/2020/05/Facturacion-Electronica-2020.jpg",
+    "stock": "2"
+},
+{
+    "id": "P6000",
+    "category": "asesoria",
+    "title": "Emprendimiento",
+    "description": "Como emprender y no morir en el intento",
+    "price": "100.00 USD",
+    "pictureUrl": "https://thumbs.dreamstime.com/z/los-emprendedores-de-equipo-llevan-al-%C3%A9xito-ayudando-construir-una-escalera-car%C3%A1cter-plano-d-concepto-para-dise%C3%B1o-web-189158967.jpg",
+    "stock": "20"
+},
+{
+    "id": "P6100",
+    "category": "asesoria",
+    "title": "Transformación digital",
+    "description": "Hora de digitalizar los procesos",
+    "price": "150.00 USD",
+    "pictureUrl": "https://www.processmaker.com/wp-content/uploads/2019/10/Accelerate-Digital-Transformation-768x410.png",
+    "stock": "20"
+},
+{
+    "id": "P6200",
+    "category": "asesoria",
+    "title": "Ecommerce",
+    "description": "Es hora de vender por internet",
+    "price": "200.00 USD",
+    "pictureUrl": "https://www.muycanal.com/wp-content/uploads/2017/07/e-commerce_experiencia_usuario.jpg",
+    "stock": "20"
+}
+]

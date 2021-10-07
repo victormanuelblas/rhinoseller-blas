@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom'
 //--Css
 import './Item.css';
 
 function Item ({item}){
     
-    const {id, title, description, price, pictureUrl} = item;
+    const {id, title, description, price, pictureUrl, category} = item;
     console.log('recibiendo',item);
     return (
         <div className="col-12 col-md-3">
@@ -15,10 +16,9 @@ function Item ({item}){
                         <h5>Sku: {id}</h5>
                     </div>
                 </div>
-
                 <div className="row c-flex">
                     <div className="col-12">
-                        <img src={pictureUrl} />
+                        <img src={pictureUrl} alt="Rhinoseller" />
                     </div>
                 </div>
                 <div className="row">
@@ -29,6 +29,16 @@ function Item ({item}){
                 <div className="row">
                     <div className="col-12">
                         <strong>Precio: <span>{price}</span></strong>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-12 d-flex">
+                        <Link to={`/item/${id}`}>Ver detalle del producto</Link>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-12 d-flex">
+                        <i>{category}</i>
                     </div>
                 </div>
             </div>
