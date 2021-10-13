@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 //--components
 import ItemCount from './ItemCount';
 //--Css
@@ -6,7 +7,14 @@ import './ItemDetail.css';
 
 const ItemDetail = ({item}) => {
     const {id, title, description, price, pictureUrl, stock} = item
-console.log('Recibiendo', item)
+//console.log('Recibiendo', item)
+    const [ goToCart, setGoToCart ] = useState(false);
+
+    const onAdd = (qnty) => {
+        console.log('cargando el onAdd');
+        setGoToCart(true);
+    }
+    
     return (
         <div className="col-12 detail_content">
             <div className="row">
@@ -23,7 +31,13 @@ console.log('Recibiendo', item)
                     </div>
                     <div className="row">
                         <div className="col-12 col-md-6">
-                            <ItemCount stock={stock} initial="1" onAdd />
+                            {
+                                goToCart ? (
+                                    <Link to="/cart" className="gotocart">Ir a pagar</Link>
+                                ) : (
+                                    <ItemCount stock={stock} initial="1" onAdd={onAdd} />
+                                )
+                            }
                         </div>
                     </div>
                     <div className="row">

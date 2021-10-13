@@ -42,7 +42,7 @@ const ItemDetailContainer = () => {
         <div className="row">
             {
                 item_selected.map(item =>
-                    <ItemDetail  item={item}/>    
+                    <ItemDetail key={item.id} item={item}/>    
                 )
             }
         </div>

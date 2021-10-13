@@ -29,7 +29,9 @@ function ItemCount({stock, initial, onAdd}) {
             //onAdd(qnty);
         }
     }
-
+    function Locura() {
+        console.log('Clickeando');
+    }
     return (
         <div className="col-12">
             <div className="prod_content">
@@ -62,7 +64,7 @@ function ItemCount({stock, initial, onAdd}) {
                 </div>
                 <div className="row">
                     <div className="col-12">
-                        <button className="btn btn-light" onClick={AddToCart}>Agregar</button>
+                        <button className="btn btn-light" onClick={onAdd}>Agregar</button>
                     </div>
                 </div>
             </div>
