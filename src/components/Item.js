@@ -6,7 +6,7 @@ import './Item.css';
 function Item ({item}){
     
     const {id, title, description, price, pictureUrl, category} = item;
-    console.log('recibiendo',item);
+    //console.log('recibiendo',item);
     return (
         <div className="col-12 col-md-3">
             <div className="item_detail">

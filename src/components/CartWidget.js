@@ -3,6 +3,7 @@ import "./CartWidget.css";
 import CartIcon from "../resources/ecmm-cart-icon.png";
 
 function CartWidget (props) {
+    
     return (
         <div className="cart_content">
             <div className="row">

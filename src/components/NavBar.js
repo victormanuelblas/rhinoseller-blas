@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from 'react-router-dom'
 
 import CartWidget from "./CartWidget";
 
+import { ItemsContext } from './CartContext'
+
 function NavBar() {
+
+    const { items } = useContext(ItemsContext);
+
+    console.log('listado de items en navbar', items);
+
+    function getItemsQnty () {
+        let rslt = 0;
+        for (let ctrl in items){
+            rslt += items[ctrl].qnty
+        }
+        return rslt
+    }
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
@@ -25,7 +40,7 @@ function NavBar() {
                         </li>
                     </ul>
                     <div className="d-flex">
-                        <CartWidget itms="2"/>
+                        <CartWidget itms={getItemsQnty()} />
                     </div>
                 </div>
             </div>

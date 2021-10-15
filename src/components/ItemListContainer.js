@@ -24,7 +24,7 @@ function ItemListContainer(){
     }    
 
     const getItemList = async () => {
-        console.log('3-categ', categoryId)
+        //console.log('3-categ', categoryId)
         return await data_content()
     }
 
@@ -36,7 +36,7 @@ function ItemListContainer(){
         .catch((err) =>{
             console.log('Oooops: ',err);
         })
-        console.log('=========final========');
+        //console.log('=========final========');
     }, [categoryId])  
     
     return (
