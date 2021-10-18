@@ -13,7 +13,7 @@ const CartContext = ({ children }) => {
         return rslt
     }
 
-    const addItemP = (item, qnty) => {
+    const addItem = (item, qnty) => {
         if  (!isInCart(item.id)){
 
             item.qnty = parseInt(qnty)
@@ -21,36 +21,17 @@ const CartContext = ({ children }) => {
 
         } else {
 
-            let bf_items = items.find(elmn => elmn.id = item.id)
-            bf_items.qnty += parseInt(qnty)
-            
-            //setItems(items)
-            setItems([bf_items])
+            let updt_qnty_items = items.map(elmn => (elmn.id === item.id ? {...elmn, qnty : elmn.qnty + parseInt(qnty)} : elmn))
+            console.log('items actuslizado',updt_qnty_items);
+            setItems([...updt_qnty_items])
 
         }
     }
-    const addItem = (producto,qnty)=>{
-        
-        if (items.some((product) => product.id === producto.id)) {
-            const Productos = items.map((Producto) => {
-              if (Producto.id === producto.id) {
-                Producto.qnty += parseInt(qnty);
-                return Producto;
-              } else {
-                return Producto;
-              }
-            });
-            setItems ( [...Productos]);
-          } else {
-            producto.qnty = parseInt(qnty);
-            setItems(  [...items, producto]);
-          }
-    
-    }
+  
     const removeItem = (itemId) => {
-        var elms = items.filter(item => item.id != itemId); // make a separate copy of the array
+        var elms = items.filter(item => item.id != itemId); 
         
-        setItems([elms])
+        setItems([...elms])
 
     }
 
@@ -60,7 +41,7 @@ const CartContext = ({ children }) => {
     }
 
     return (
-        <ItemsContext.Provider value={{items, setItems, addItem}}>
+        <ItemsContext.Provider value={{items, addItem, removeItem, clear}}>
             {children}
         </ItemsContext.Provider>
     )

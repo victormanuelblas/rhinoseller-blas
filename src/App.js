@@ -5,7 +5,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer'
-import CartContent from './components/CartContent';
+import Cart from './components/Cart';
 //--Context
 import CartContext from './components/CartContext';
 
@@ -25,7 +25,7 @@ function App() {
                 <ItemListContainer />
               </Route>
               <Route exact path="/cart">
-                <CartContent />
+                <Cart />
               </Route>
               <Route exact path="/category/:categoryId">
                 <ItemListContainer />

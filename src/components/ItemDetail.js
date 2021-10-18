@@ -15,7 +15,6 @@ const ItemDetail = ({item}) => {
     const { addItem } = useContext(ItemsContext);
 
     const onAdd = (qnty) => {
-        console.log('cargando el onAdd');
 
         addItem(item, qnty)
 
@@ -40,7 +39,7 @@ const ItemDetail = ({item}) => {
                         <div className="col-12 col-md-6">
                             {
                                 goToCart ? (
-                                    <Link to="/cart" className="gotocart">Ir a pagar</Link>
+                                    <Link to="/cart" className="gotocart">Terminar mi compra</Link>
                                 ) : (
                                     <ItemCount stock={stock} initial="1" onAdd={onAdd} />
                                 )

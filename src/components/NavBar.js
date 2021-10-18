@@ -9,15 +9,14 @@ function NavBar() {
 
     const { items } = useContext(ItemsContext);
 
-    console.log('listado de items en navbar', items);
-
     function getItemsQnty () {
-        let rslt = 0;
-        for (let ctrl in items){
-            rslt += items[ctrl].qnty
-        }
+
+        let rslt = items.reduce((totl,elmn) => (typeof(elmn.qnty) == "number" ? totl + elmn.qnty : totl),0);
+
         return rslt
     }
+
+    console.log()
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -40,7 +39,9 @@ function NavBar() {
                         </li>
                     </ul>
                     <div className="d-flex">
-                        <CartWidget itms={getItemsQnty()} />
+                        {
+                            (getItemsQnty() > 0 ? <CartWidget itms={getItemsQnty()} /> : "")
+                        }
                     </div>
                 </div>
             </div>
