@@ -22,7 +22,7 @@ const CartContext = ({ children }) => {
         } else {
 
             let updt_qnty_items = items.map(elmn => (elmn.id === item.id ? {...elmn, qnty : elmn.qnty + parseInt(qnty)} : elmn))
-            console.log('items actuslizado',updt_qnty_items);
+            //console.log('items actuslizado',updt_qnty_items);
             setItems([...updt_qnty_items])
 
         }

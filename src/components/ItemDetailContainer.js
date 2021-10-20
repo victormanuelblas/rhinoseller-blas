@@ -6,6 +6,9 @@ import ItemDetail from './ItemDetail';
 import './ItemDetail.js';
 //Data
 import item_data from './Products.json'
+//Firebase
+import db from '../firebase';
+import { doc, getDoc } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
     const [item_selected, setitem_selected] = useState([]);
@@ -21,7 +24,13 @@ const ItemDetailContainer = () => {
     }
     
     const getItem = async () => {
-        return await data_content()
+        //return await data_content()
+        const itemDocmRefr = doc(db,"products", itemId);
+        const itemSnap = await getDoc(itemDocmRefr);
+        const itemData = itemSnap.data();
+        itemData.id = itemId;
+
+        return [itemData];
     }
 
     useEffect(() => {
@@ -35,7 +44,7 @@ const ItemDetailContainer = () => {
         })
     }, [itemId])
     
-    //console.log('us',item_selected);
+    //console.log('item selected',item_selected);
 
     return (
         

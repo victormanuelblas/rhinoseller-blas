@@ -8,8 +8,11 @@ import './ItemDetail.css';
 import { ItemsContext } from './CartContext';
 
 const ItemDetail = ({item}) => {
+
+    //console.log('Recibe item detail', item);
+
     const {id, title, description, price, pictureUrl, stock} = item
-//console.log('Recibiendo', item)
+
     const [ goToCart, setGoToCart ] = useState(false);
 
     const { addItem } = useContext(ItemsContext);
