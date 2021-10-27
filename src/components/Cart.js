@@ -28,9 +28,9 @@ const Cart = () => {
         subtotal: ""
     }
 
-    function deleItem(itemId) {
-        removeItem(itemId);
-    }
+    //function deleItem(itemId) {
+    //    removeItem(itemId);
+    //}
 
     return (
 
@@ -43,6 +43,10 @@ const Cart = () => {
                     )
                 }
                 <CartItem mode="foot" item={items_foot} />
+
+                <p>
+                    <Link to="/checkout">Ir a pagar</Link>
+                </p>
             </>
             :
             <>

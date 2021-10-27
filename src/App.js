@@ -8,6 +8,7 @@ import ItemDetailContainer from './components/ItemDetailContainer'
 import Cart from './components/Cart';
 //--Context
 import CartContext from './components/CartContext';
+import Checkout from './components/Checkout';
 
 function App() {
 
@@ -32,6 +33,9 @@ function App() {
               </Route>
               <Route exact path="/item/:itemId">
                 <ItemDetailContainer />
+              </Route>
+              <Route>
+                <Checkout exact path="/checkout" />
               </Route>
             </Switch>
           </div>
