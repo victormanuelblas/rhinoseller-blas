@@ -3,8 +3,6 @@ import { useParams } from 'react-router-dom';
 //Componentes
 import ItemList from './ItemList';
 import "./ItemListContainer.css";
-//Data
-import item_data from './Products.json'
 //Firebase
 import db from '../firebase';
 import { collection, getDocs, where, query } from 'firebase/firestore';
@@ -12,19 +10,7 @@ import { collection, getDocs, where, query } from 'firebase/firestore';
 function ItemListContainer(){
     const [item_list, setitem_list] = useState([])
 
-    let { categoryId } = useParams();
-
-    const data_content = () => {
-        return new Promise ((resolve, reject) => {
-            setTimeout(() => {
-                if (categoryId == undefined) {
-                    resolve(item_data);
-                } else {
-                    resolve(item_data.filter(item => item.category === categoryId));
-                }
-            },2000)
-        })
-    }    
+    let { categoryId } = useParams();    
 
     const getItemList = async () => {
         //console.log('3-categ', categoryId)
@@ -32,7 +18,7 @@ function ItemListContainer(){
         const itemsColct = collection(db,'products')
         let itemsSnpSh = []
 
-        if (categoryId != undefined){
+        if (categoryId !== undefined){
             const itemsQuery = query(itemsColct, where("category", "==", categoryId))
             itemsSnpSh = await getDocs(itemsQuery);
         } else {
@@ -65,7 +51,7 @@ function ItemListContainer(){
 
         <div className="items_main">
             <div>
-                <h3>Categoría: {(categoryId != undefined) ? categoryId : 'Todos'}</h3>
+                <h3>Categoría: {(categoryId !== undefined) ? categoryId : 'Todos'}</h3>
             </div>
             <div>
                 <div className="row">

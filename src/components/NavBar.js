@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { Link } from 'react-router-dom'
 
 import CartWidget from "./CartWidget";
@@ -27,13 +27,13 @@ function NavBar() {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li className="nav-item dropdown">
-                            <Link className="nav-link dropdown-toggle" to="/category/aplicaciones" id="navbarDropdown" role="button" aria-expanded="false">
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/category/aplicaciones" id="navbarDropdown" role="button" aria-expanded="false">
                                 Aplicaciones
                             </Link>
                         </li>
-                        <li className="nav-item dropdown">
-                            <Link className="nav-link dropdown-toggle" to="/category/asesoria" id="navbarDropdown" role="button" aria-expanded="false">
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/category/asesoria" id="navbarDropdown" role="button" aria-expanded="false">
                                 Asesoría
                             </Link>
                         </li>

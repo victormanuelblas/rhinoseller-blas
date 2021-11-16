@@ -29,7 +29,7 @@ const CartContext = ({ children }) => {
     }
   
     const removeItem = (itemId) => {
-        var elms = items.filter(item => item.id != itemId); 
+        var elms = items.filter(item => item.id !== itemId); 
         
         setItems([...elms])
 

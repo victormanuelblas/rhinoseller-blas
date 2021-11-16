@@ -4,8 +4,6 @@ import { useParams } from 'react-router-dom'
 import ItemDetail from './ItemDetail';
 //--css
 import './ItemDetail.js';
-//Data
-import item_data from './Products.json'
 //Firebase
 import db from '../firebase';
 import { doc, getDoc } from 'firebase/firestore';
@@ -14,14 +12,6 @@ const ItemDetailContainer = () => {
     const [item_selected, setitem_selected] = useState([]);
 
     let { itemId } = useParams();
-
-    const data_content = () => {
-        return new Promise ((resolve, reject) => {
-            setTimeout(() => {
-                resolve(item_data.filter(item => item.id === itemId));
-            },2000)
-        })
-    }
     
     const getItem = async () => {
         //return await data_content()

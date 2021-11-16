@@ -9,7 +9,7 @@ const CartItem = ({mode, item, removeItem }) => {
         removeItem(itemId);
     }
 
-    if (mode == "head") {
+    if (mode === "head") {
         return (
             <div className="row cart_item_head">
                 <div className="col-12 col-md-1"></div>
@@ -29,7 +29,7 @@ const CartItem = ({mode, item, removeItem }) => {
             </div>
         )
     }
-    if (mode == "foot") {
+    if (mode === "foot") {
         return (
             <div className="row cart_item_foot">
                 <div className="col-12 col-md-1"></div>
@@ -49,7 +49,7 @@ const CartItem = ({mode, item, removeItem }) => {
     return (
         <div className="row cart_item_elmn">
             <div className="col-12 col-md-1">
-                <img src={item.pictureUrl} /> 
+                <img src={item.pictureUrl} alt={item.title} /> 
             </div>
             <div className="col-12 col-md-4">
                 <span>{item.title}</span>

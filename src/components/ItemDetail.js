@@ -11,7 +11,7 @@ const ItemDetail = ({item}) => {
 
     //console.log('Recibe item detail', item);
 
-    const {id, title, description, price, pictureUrl, stock} = item
+    const {title, description, price, pictureUrl, stock} = item
 
     const [ goToCart, setGoToCart ] = useState(false);
 

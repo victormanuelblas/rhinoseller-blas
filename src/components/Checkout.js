@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import reactdom from 'react-dom'
 
 import { ItemsContext } from './CartContext'
 
