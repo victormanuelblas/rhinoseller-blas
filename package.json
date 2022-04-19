@@ -1,6 +1,7 @@
 {
   "name": "rhinoseller-blas",
   "version": "0.1.0",
+  "homepage": "/rhno-store/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.3",
